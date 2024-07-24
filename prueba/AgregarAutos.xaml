@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="prueba.AgregarAutos"
+             Title="AgregarAutos">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="90*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+
+        <VerticalStackLayout
+            Grid.Column="1"
+            Grid.Row="1">
+            <Image x:Name="imgAuto" Aspect="AspectFit" HeightRequest="200" WidthRequest="200" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Button x:Name="btnCargarFoto" Text="Cargar Foto" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="110" HeightRequest="40" Clicked="btnCargarFoto_Clicked"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout
+            Grid.Column="1"
+            Grid.Row="2">
+            <Picker 
+                x:Name="pkrPlacas" SelectedIndexChanged="pkrPlacas_SelectedIndexChanged"
+                Title="Selecciona una placa">
+            </Picker>
+            <Entry 
+                x:Name="tbPlacas"
+                Placeholder="Placa">
+            </Entry>
+            <Entry 
+                x:Name="tbMarca"
+                Placeholder="Marca">
+            </Entry>
+            <Entry 
+                x:Name="tbModelo"
+                Placeholder="Modelo">
+            </Entry>
+            <Entry 
+                x:Name="tbAño"
+                Placeholder="Año">
+            </Entry>
+            <Entry 
+                x:Name="tbColor"
+                Placeholder="Color">
+            </Entry>
+            <Entry 
+                x:Name="tbPrecio"
+                Placeholder="Precio x dia">
+            </Entry>
+        </VerticalStackLayout>
+        <HorizontalStackLayout
+            Grid.Column="1"
+            Grid.Row="3"
+            HorizontalOptions="CenterAndExpand">
+            <Button
+                x:Name="btnGuardar"
+                Text="Guardar"
+                TextColor="White"
+                BackgroundColor="ForestGreen"
+                CornerRadius="20"
+                WidthRequest="120"
+                HeightRequest="40"
+                Clicked="btnGuardar_Clicked">
+            </Button>
+            <Button
+                x:Name="btnModificar"
+                Text="Modificar"
+                TextColor="White"
+                BackgroundColor="Purple"
+                CornerRadius="20"
+                WidthRequest="150"
+                HeightRequest="40"
+                Clicked="btnModificar_Clicked">
+            </Button>
+        </HorizontalStackLayout>
+    </Grid>
+</ContentPage>

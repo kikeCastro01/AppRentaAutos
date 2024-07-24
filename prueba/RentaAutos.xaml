@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="prueba.RentaAutos"
+             Title="RentaAutos">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="90*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+
+        <VerticalStackLayout
+           Grid.Column="1"
+           Grid.Row="2">
+            <Entry 
+               x:Name="tbCliente"
+               Placeholder="Cliente">
+            </Entry>
+            <Entry 
+               x:Name="tbTelefono"
+               Placeholder="Telefono">
+            </Entry>
+            <Entry 
+               x:Name="tbPlacasRenta"
+               Placeholder="Placas">
+            </Entry>
+            <Entry 
+               x:Name="tbPrecioRenta"
+               Placeholder="Precio x dia">
+            </Entry>
+            <Label 
+                Text="Fecha de Salida:"/>
+            <DatePicker
+               x:Name="dpFechaSalida"/>
+            <Label 
+                Text="Fecha de Entrega:"/>
+            <DatePicker
+               x:Name="dpFechaEntrega"/>
+            <Label 
+                Text="Total a pagar:"/>
+            <Entry 
+               x:Name="tbPrecioTotal">
+            </Entry>
+        </VerticalStackLayout>
+        <HorizontalStackLayout
+           Grid.Column="1"
+           Grid.Row="3"
+           HorizontalOptions="CenterAndExpand">
+            <Button
+               x:Name="btnRentar"
+               Text="Rentar"
+               TextColor="White"
+               BackgroundColor="ForestGreen"
+               CornerRadius="20"
+               WidthRequest="120"
+               HeightRequest="40"
+                Clicked="btnRentar_Clicked">
+            </Button>
+        </HorizontalStackLayout>
+    </Grid>
+</ContentPage>
